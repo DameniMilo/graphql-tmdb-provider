@@ -75,7 +75,7 @@
                             org.jahia.modules.graphqltmdbprovider.api,
                             com.uwetrottmann.tmdb2.entities
                         </Export-Package>
-                        <Jahia-Depends>default</Jahia-Depends>
+                        <Jahia-Depends>default,graphql-dxm-provider</Jahia-Depends>
                         <_dsannotations>*</_dsannotations>
                     </instructions>
                 </configuration>
