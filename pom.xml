@@ -90,7 +90,7 @@
                             org.jahia.modules.graphqltmdbprovider.api,
                             com.uwetrottmann.tmdb2.entities
                         </Export-Package>
-                        <Jahia-Depends>default,bootstrap-components,bootstrap,external-provider</Jahia-Depends>
+                        <Jahia-Depends>default</Jahia-Depends>
                         <_dsannotations>*</_dsannotations>
                     </instructions>
                 </configuration>
