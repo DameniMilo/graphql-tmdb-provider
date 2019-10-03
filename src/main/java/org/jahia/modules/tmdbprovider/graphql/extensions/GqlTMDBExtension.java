@@ -1,17 +1,17 @@
-package org.jahia.modules.graphqltmdbprovider.graphql.extensions;
+package org.jahia.modules.tmdbprovider.graphql.extensions;
 
 import graphql.annotations.annotationTypes.GraphQLDescription;
 import graphql.annotations.annotationTypes.GraphQLField;
 import graphql.annotations.annotationTypes.GraphQLName;
 import graphql.annotations.annotationTypes.GraphQLTypeExtension;
 import org.jahia.modules.graphql.provider.dxm.DXGraphQLProvider;
-import org.jahia.modules.graphqltmdbprovider.graphql.api.GqlTMDB;
+import org.jahia.modules.tmdbprovider.graphql.api.GqlTMDB;
 
 /**
  * This extension to the Query is where the TMDB GraphQL API is made available
  */
 @GraphQLTypeExtension(DXGraphQLProvider.Query.class)
-public class QueryExtensions {
+public class GqlTMDBExtension {
 
     @GraphQLField
     @GraphQLName("tmdb")
