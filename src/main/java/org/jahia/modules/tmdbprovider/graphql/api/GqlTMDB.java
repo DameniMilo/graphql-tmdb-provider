@@ -46,17 +46,17 @@ public class GqlTMDB {
     @GraphQLField
     @GraphQLName("movies")
     @GraphQLDescription("Return a list of movies")
-    public Collection<GqlBaseMovie> getMovies (
+    public Collection<GqlMovie> getMovies (
         @GraphQLName("year")
         @GraphQLNonNull
         @GraphQLDescription("The year of the movies we want to retrieve")
             int year) {
         try {
             List<BaseMovie> baseMovies = tmdbService.getMovies(year);
-            ArrayList<GqlBaseMovie> gqlBaseMovies = new ArrayList<>();
+            ArrayList<GqlMovie> gqlBaseMovies = new ArrayList<>();
             if (!baseMovies.isEmpty()) {
                 for (BaseMovie baseMovie : baseMovies) {
-                    gqlBaseMovies.add(new GqlBaseMovie(baseMovie));
+                    gqlBaseMovies.add(new GqlMovie(baseMovie));
                 }
             }
             return gqlBaseMovies;

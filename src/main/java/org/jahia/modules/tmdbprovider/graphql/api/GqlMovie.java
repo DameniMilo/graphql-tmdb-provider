@@ -1,6 +1,6 @@
 package org.jahia.modules.tmdbprovider.graphql.api;
 
-import com.uwetrottmann.tmdb2.entities.Movie;
+import com.uwetrottmann.tmdb2.entities.BaseMovie;
 import graphql.annotations.annotationTypes.GraphQLDescription;
 import graphql.annotations.annotationTypes.GraphQLField;
 import graphql.annotations.annotationTypes.GraphQLName;
@@ -10,14 +10,20 @@ import graphql.annotations.annotationTypes.GraphQLName;
  */
 @GraphQLName("Movie")
 public class GqlMovie {
-    private Movie tmdbMovie;
+    private BaseMovie tmdbMovie;
 
-    public GqlMovie(Movie tmdbMovie) {
+    public GqlMovie(BaseMovie tmdbMovie) {
         this.tmdbMovie = tmdbMovie;
     }
 
-    public Movie getTmdbMovie() {
+    public BaseMovie getTmdbMovie() {
         return tmdbMovie;
+    }
+
+    @GraphQLField
+    @GraphQLDescription("Retrieve the TMDB id of the Movie")
+    public Integer getId() {
+        return tmdbMovie.id;
     }
 
     @GraphQLField
