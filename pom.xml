@@ -11,7 +11,7 @@
     <artifactId>graphql-tmdb-provider</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>graphql-tmdb-provider</name>
+    <name>Jahia GraphQL TMDB Provider</name>
     <description>This is the custom module (graphql-tmdb-provider) for running on Jahia</description>
 
     <scm>
@@ -83,6 +83,7 @@
                         </Import-Package>
                         <Export-Package>
                             org.jahia.modules.tmdbprovider.graphql.api,
+                            org.jahia.modules.tmdbprovider.api,
                             com.uwetrottmann.tmdb2.entities
                         </Export-Package>
                         <Jahia-Depends>default,graphql-dxm-provider</Jahia-Depends>
